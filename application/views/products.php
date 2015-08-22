@@ -1,3 +1,3 @@
-This is product view
-<br>
-<?php echo $name;?>
+<?php foreach ($products as $product):?>
+
+<?php endforeach;?>
