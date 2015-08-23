@@ -17,11 +17,11 @@ class Products extends CI_Controller{
 		
 	}
 	
-	public function details(){
+	public function details($id){
 
 		//Get Prodcut details
 		
-		$data['products']=$this->Product_model->get_product_details($id);
+		$data['product']=$this->Product_model->get_product_details($id);
 		
 		$data['main_content']='details';
 			
