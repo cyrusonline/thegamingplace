@@ -26,13 +26,11 @@
 					</div>
 					<!--List group-->
 					<ul class="list-group">
-						<li class="list-group-item"><a href="#">Gaming Consoles</a></li>
-						<li class="list-group-item"><a href="#">Xbox One Games</a></li>
-						<li class="list-group-item"><a href="#">Playstation 4 Games</a></li>
-						<li class="list-group-item"><a href="#">Nintendo Wii U Games</a></li>
-						<li class="list-group-item"><a href="#">Xbox 360 Games</a></li>
-						<li class="list-group-item"><a href="#">Playstation 3 Games</a></li>
-						<li class="list-group-item"><a href="#">Nintendo Wii Games</a></li>
-						<li class="list-group-item"><a href="#">Other Console Games</a></li>
+						<?php foreach(get_categories_h() as $category):?>
+										
+						<li class="list-group-item"><a href="#"><?php echo $category->name;?></a></li>
+						<?php endforeach;?>
+						
+					
 					</ul>
 				</div>
