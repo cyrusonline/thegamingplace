@@ -37,12 +37,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The GamingPlace</a>
+          <a class="navbar-brand" href="<a href="<?php echo base_url()?>">The GamingPlace</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="register.html">Create Account</a></li>
+            <li class="active"><a href="<?php echo base_url()?>">Home</a></li>
+            <li><a href="<a href="<?php echo base_url()?>user/register">Create Account</a></li>
            
           </ul>
            <form class="navbar-form navbar-right" role="search">
