@@ -28,6 +28,6 @@ class Product_model extends CI_Model{
 		$this->db->where('id',$id);
 		
 		$query = $this->db->get();
-		return $query->result();
+		return $query->row();
 	}
 }
