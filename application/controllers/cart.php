@@ -15,7 +15,7 @@ class Cart extends CI_Controller{
 	
 	public function index(){
 		$data['main_content']='cart';
-		$this->load->view('layout/main',$data);
+		$this->load->view('layouts/main',$data);
 	}
 	
 	/*
@@ -29,7 +29,6 @@ class Cart extends CI_Controller{
 				//the following name is comming from the  form of the the product view
 			'id'=> $this->input->post('item_number'),
 			'qty'=> $this->input->post('qty'),
-			'price'=> $this->input->post('price'),
 			'price'=> $this->input->post('price'),
 			'name'=> $this->input->post('title')
 				
