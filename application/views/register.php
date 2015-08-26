@@ -1,6 +1,7 @@
 	<?php echo validation_errors('<div class = "alert alert-danger">','</div>'); ?>
 	
 	<form method = "post" acton="<?php echo base_url();?>users/register">
+				
 							<div class="form-group">
 								<label>First Name*</label>
 								<input type="text" class="form-control" name ="first_name" placeholder="Enter your first name"/ >
