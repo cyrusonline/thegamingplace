@@ -39,13 +39,17 @@
           </button>
           <a class="navbar-brand" href="<a href="<?php echo base_url()?>">The GamingPlace</a>
         </div>
+        
+        
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo base_url()?>">Home</a></li>
-            <li><a href="<a href="<?php echo base_url()?>user/register">Create Account</a></li>
+            <li><a href="<?php echo base_url()?>users/register">Create Account</a></li>
            
           </ul>
-           <form class="navbar-form navbar-right" role="search">
+          
+          <?php if(!$this->session->userdata('logged_in')):?>
+           <form method="post" action="<?php echo base_url();?>users/login" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="username" type="text" class="form-control" placeholder="Enter User Name">
         </div>
@@ -54,6 +58,11 @@
         </div>
         <button name="submit" type="submit" class="btn btn-default">Login</button>
       </form>
+      <?php else:?>
+      <form method="post" action="<?php echo base_url(); ?>users/logout" class="navbar-form navbar-right"">
+						<button name="submit" type="submit" class="btn btn-default">Logout</button>
+					</form>
+      <?php endif?>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
